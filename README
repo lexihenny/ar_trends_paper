@@ -1,0 +1,58 @@
+The scripts used to produce the paper figures (including calculations and plotting) are as follows:
+
+
+Fig 1 - global_mean_ivt_iwv_s_plots.ipynb
+Fig 2 - ar_area_calc_plot_all.ipynb
+Fig 3 - mean_poleward_lat_whole_area_all_calc_and_plot.ipynb
+Fig 4 - eivt_frequency_geotrends_consensus_variants_calc_plots.ipynb, ar_frequency_geomeans_geotrends_calc_plot_variants.ipynb, ar_freq_means_trends_artmip_calc_and_plot.ipynb
+Fig 5 - ar_synoptic_vars_geomeans_era5.ipynb, ar_synoptic_vars_geomeans_jra55.ipynb, ar_synoptic_vars_geomeans_merra2.ipynb, ar_synoptic_vars_geomeans_plots_variants.ipynb
+Fig 6 - ar_synoptic_time_series_whole_area_variants.ipynb, ar_synoptic_time_series_whole_area_artmip.ipynb, ar_synoptic_time_series_whole_area_plots.ipynb
+Fig 7 - ar_synoptic_time_series_whole_area_variants.ipynb, ar_synoptic_time_series_whole_area_artmip.ipynb, ar_synoptic_time_series_whole_area_plots.ipynb
+Fig 8 - ar_synoptic_time_series_whole_area_variants.ipynb, ar_synoptic_time_series_whole_area_artmip.ipynb, ar_area_calc_plot_all.ipynb, big_summary_figure.ipynb
+Fig 9 - ar_synoptic_vars_geomeans_era5.ipynb, ar_synoptic_vars_geomeans_jra55.ipynb, ar_synoptic_vars_geomeans_merra2.ipynb, synoptic_geomeans_geotrends_artmip_calc_and_plot_consensus.ipynb, synoptic_geotrends_variants_calc_and_plot_consensus.ipynb
+Fig 10 - ar_synoptic_vars_geomeans_era5.ipynb, ar_synoptic_vars_geomeans_jra55.ipynb, synoptic_geomeans_geotrends_artmip_calc_and_plot_consensus.ipynb, synoptic_geotrends_variants_calc_and_plot_consensus.ipynb, ar_synoptic_vars_mean_slopes_artmip.ipynb, ar_synoptic_vars_mean_slopes_variants.ipynb
+Fig 11 - ar_chars_line_merra2.ipynb, ar_chars_line_era5.ipynb, ar_chars_line_jra55.ipynb, ar_chars_line_artmip.ipynb, withinar_global_synoptic_time_series_artmip.ipynb, withinar_global_synoptic_time_series_era5_variants.ipynb, withinar_global_synoptic_time_series_jra55_variants.ipynb, withinar_global_synoptic_time_series_merra2_variants.ipynb, big_summary_figure_within_and_numarea.ipynb
+Fig 12 - fixed_frequency_analysis.ipynb, fixed_frequency_analysis_plots.ipynb
+Fig 13 - fixed_frequency_analysis.ipynb, fixed_frequency_analysis_plots.ipynb
+Fig 14 - synoptic_geomeans_geotrends_artmip_calc_and_plot_consensus_MAX.ipynb, synoptic_geotrends_variants_calc_and_plot_consensus_MAX.ipynb, ar_synoptic_vars_mean_slopes_artmip.ipynb, ar_synoptic_vars_mean_slopes_variants.ipynb
+
+______________________
+
+Foundational scripts are as follows:
+
+era5_vars_convert.ipynb, merra2_vars_convert.ipynb, jra_aggregate.ipynb - download and/or process some variables from reanalyses (including interpolation to MERRA-2 grid for ERA5)
+
+artmip2_data_convert.ipynb - read ar binary tag files from ARTMIP Tier 2 catalogue and convert to MERRA-2 grid 6-hourly for MERRA-2 and ERA5 (JRA-55 left on 1.25 degree).
+
+ar_detection_merra2_polar.ipynb, ar_detection_merra2.ipynb, ar_detection_era5_polar.ipynb, ar_detection_era5.ipynb, ar_detection_jra55_polar.ipynb, ar_detection_jra55.ipynb + ar_label.ipynb - detect ARs using original methodology and then run through an additional labeling step which assigns each AR its own unique value and eliminates small features (<100 grid points for MERRA-2 grid, <20 grid points for JRA-55 grid)
+
+ar_detection_fixed_poleward_filter.ipynb - fixed poleward detection; filters out ARs without mean poleward 50 kg m-1 s-1 IVTV component
+
+fdr_calc.ipynb - false discovery rate Control for spatially-averaged time series
+
+______________________
+
+
+Scripts for supplemental material are as follows:
+
+Fig S1 - ar_detection_era5_polar.ipynb,ar_detection_merra2_polar.ipynb,ar_detection_jra55_polar.ipynb
+Fig S2 - ar_detection_demo.ipynb
+Fig S3 - ar_detection_era5.ipynb, ar_detection_merra2_polar.ipynb
+Fig S4 - ar_frequency_geomeans_geotrends_variants.ipynb
+Fig S5 - global_mean_ivt_iwv_s_plots.ipynb (see also ivt_collow_compare.ipynb)
+Fig S6 - ar_chars_line_merra2.ipynb, ar_chars_line_era5.ipynb, ar_chars_line_jra55.ipynb, ar_chars_line_artmip.ipynb, big_summary_figure_within_and_numarea.ipynb
+Fig S7 - ar_chars_line_merra2.ipynb, ar_chars_line_era5.ipynb, ar_chars_line_jra55.ipynb, ar_chars_line_artmip.ipynb, mean_poleward_lat_whole_area_all_calc_and_plot.ipynb, big_summary_figure_lat.ipynb
+Fig S8 - eivt_frequency_geotrends_consensus_variants_calc_plots.ipynb
+Fig S9 - ar_synoptic_vars_geomeans_plots_artmip_variants.ipynb
+Fig S10 - ar_synoptic_vars_geomeans_plots_artmip_variants.ipynb
+Fig S11 - ar_synoptic_vars_geomeans_plots_artmip_variants.ipynb
+Fig S12 - ar_synoptic_vars_geomeans_era5.ipynb, ar_synoptic_vars_geomeans_jra55.ipynb, ar_synoptic_vars_geomeans_merra2.ipynb, synoptic_geomeans_geotrends_artmip_calc_and_plot_consensus.ipynb, synoptic_geotrends_variants_calc_and_plot_consensus.ipynb
+Fig S13 - withinar_landocean_synoptic_time_series_jra55_variants.ipynb, withinar_landocean_synoptic_time_series_era5_variants.ipynb, withinar_landocean_synoptic_time_series_merra2_variants.ipynb, ar_meanmax_variant_bars.ipynb, withinar_synoptic_time_series_ocean_plots_variants.ipynb, withinar_synoptic_time_series_land_plots_variants.ipynb
+Fig S14 - fixed_frequency_analysis.ipynb, fixed_frequency_analysis_plots.ipynb
+Fig S15 - fixed_frequency_analysis.ipynb, fixed_frequency_analysis_plots.ipynb
+Fig S16 - global_ivt_frequency_trends_bins_sectors.ipynb
+Fig S17 - fixed_frequency_analysis.ipynb, fixed_frequency_analysis_plots.ipynb
+Fig S18 - synoptic_geomeans_geotrends_artmip_calc_and_plot_consensus_MAX.ipynb, synoptic_geotrends_variants_calc_and_plot_consensus_MAX.ipynb, ar_synoptic_vars_mean_slopes_artmip.ipynb, ar_synoptic_vars_mean_slopes_variants.ipynb
+
+
+
