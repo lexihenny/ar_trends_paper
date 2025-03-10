@@ -54,5 +54,19 @@ Fig S16 - global_ivt_frequency_trends_bins_sectors.ipynb
 Fig S17 - fixed_frequency_analysis.ipynb, fixed_frequency_analysis_plots.ipynb
 Fig S18 - synoptic_geomeans_geotrends_artmip_calc_and_plot_consensus_MAX.ipynb, synoptic_geotrends_variants_calc_and_plot_consensus_MAX.ipynb, ar_synoptic_vars_mean_slopes_artmip.ipynb, ar_synoptic_vars_mean_slopes_variants.ipynb
 
+***EXAMPLE USES***
 
+Detect and label ARs: 
+(1) Download data and convert to MERRA-2 grid
+(2) Run ar_detection_xxx script
+(3) run ar_label script
 
+Get global-mean synoptic variables across all AR points irrespective of AR boundaries and time continuity
+(1) Detect ARs (above)
+(2) Run ar_synoptic_time_series_whole_area_variants and ar_synoptic_time_series_whole_area_artmip scripts
+(3) Plot using ar_synoptic_time_series_whole_area_plots script
+
+Get mean synoptic and geometric variables for an AR (averaging first within ARs then across ARs, but still global and not respecting AR time continuity)
+(1) Detect ARs (above)
+(2) Calculate means using ar_chars_line_merra2/era5/jra55/artmip, withinar_global_synoptic_time_series_artmip, and withinar_global_synoptic_time_series_era5/merra2/jra55_variants scripts
+(3) Plot using big_summary_figure_within_and_numarea script
